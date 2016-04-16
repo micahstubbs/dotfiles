@@ -106,6 +106,11 @@ ts() {
 	subl "$1"
 }
 
+cs () {
+	cp "$1" "$2"
+	subl "$2"
+}
+
 # add magic
 alias enchant='git add'
 alias pray='git commit -m'
