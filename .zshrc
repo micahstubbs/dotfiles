@@ -86,15 +86,8 @@ alias gpsu='git push --set-upstream origin $(current_branch)'
 
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/Projects/config/env.sh"
 
-# Add env.sh
-. ~/workspace/config/env.sh
-
-export WORKON_HOME=~/Envs
-mkdir -p $WORKON_HOME
-source /usr/local/bin/virtualenvwrapper.sh
-
+# set an alias for the neo machine learning library
 alias neon="~/workspace/neon/bin/neon"
 
 sb() {
