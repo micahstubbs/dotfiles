@@ -1,6 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/m/.oh-my-zsh
 
+# added by Miniconda2 4.0.5 installer
+export PATH="/Users/m/miniconda2/bin:$PATH"
+export GOPATH=$HOME/workspace/go-workspace
+export SPARK_HOME=/Users/m/workspace/spark/spark-2.0.0-bin-hadoop2.7
+export MEETUP_API_KEY='38a4e6d755144067253062354754e'
+export H2O_HOME=/Users/m/workspace/h2o-3
+
+export PYTHONPATH="/Users/m/miniconda2/envs/py27/lib/python2.7/site-packages:$PYTHONPATH"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -83,27 +92,56 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gpsu='git push --set-upstream origin $(current_branch)'
+alias gw='./gradlew'
 
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
-alias envconfig="subl ~/Projects/config/env.sh"
+# alias envconfig="subl ~/Projects/config/env.sh"
 
 # Add env.sh
-. ~/workspace/config/env.sh
+# . ~/workspace/config/env.sh
 
-export WORKON_HOME=~/Envs
-mkdir -p $WORKON_HOME
-source /usr/local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=~/Envs
+# mkdir -p $WORKON_HOME
+# source /usr/local/bin/virtualenvwrapper.sh
 
 alias neon="~/workspace/neon/bin/neon"
+alias nocors="open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir"
 
+# open a file in sublime text
 sb() {
 	subl "$1"
 }
 
+# create a file and open it in sublime text
 ts() {
 	touch "$1"
 	subl "$1"
+}
+
+# count rows of a csv file
+cr() {
+  awk '{n+=1} END {print n}' "$1"
+}
+
+# alias for npm run build
+b() {
+  npm run build
+}
+
+# alias for npm run lint
+lint() {
+  npm run lint
+}
+
+# checkout a pull request locally as a branch
+# args
+# $1 remote 
+# $2 pr# 
+# $3 new branch name
+pr() {
+  git fetch "$1" pull/"$2"/head:"$3"
+  git checkout "$3"
 }
 
 # add magic
@@ -129,3 +167,7 @@ alias obtain='git fetch'
 alias rise='npm run dev'
 alias spells='ls -lAFh'
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+export PATH="$PATH:/Library/TeX/texbin"
