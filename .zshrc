@@ -5,7 +5,6 @@ export ZSH=/Users/m/.oh-my-zsh
 export PATH="/Users/m/miniconda2/bin:$PATH"
 export GOPATH=$HOME/workspace/go-workspace
 export SPARK_HOME=/Users/m/workspace/spark/spark-2.0.0-bin-hadoop2.7
-export MEETUP_API_KEY='38a4e6d755144067253062354754e'
 export H2O_HOME=/Users/m/workspace/h2o-3
 
 export PYTHONPATH="/Users/m/miniconda2/envs/py27/lib/python2.7/site-packages:$PYTHONPATH"
@@ -96,15 +95,8 @@ alias gw='./gradlew'
 
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
-# alias envconfig="subl ~/Projects/config/env.sh"
 
-# Add env.sh
-# . ~/workspace/config/env.sh
-
-# export WORKON_HOME=~/Envs
-# mkdir -p $WORKON_HOME
-# source /usr/local/bin/virtualenvwrapper.sh
-
+# set an alias for the neo machine learning library
 alias neon="~/workspace/neon/bin/neon"
 alias nocors="open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir"
 
@@ -142,7 +134,6 @@ lint() {
 pr() {
   git fetch "$1" pull/"$2"/head:"$3"
   git checkout "$3"
-}
 
 # add magic
 alias enchant='git add'
