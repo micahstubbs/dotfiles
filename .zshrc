@@ -134,6 +134,7 @@ lint() {
 pr() {
   git fetch "$1" pull/"$2"/head:"$3"
   git checkout "$3"
+}
 
 # add magic
 alias enchant='git add'
