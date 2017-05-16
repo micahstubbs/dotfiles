@@ -17,9 +17,7 @@ export PATH="/Users/m/anaconda3/bin:$PATH"
 
 export GOPATH=$HOME/workspace/go-workspace
 export SPARK_HOME=/Users/m/workspace/spark/spark-2.0.0-bin-hadoop2.7
-export MEETUP_API_KEY='38a4e6d755144067253062354754e'
 export H2O_HOME=/Users/m/workspace/h2o-3
-export PROJECT_VODA_HOME=/Users/m/workspace/project-voda
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
