@@ -1,13 +1,25 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/m/.oh-my-zsh
 
-# added by Miniconda2 4.0.5 installer
-export PATH="/Users/m/miniconda2/bin:$PATH"
+#
+#
+#
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+export PATH="$PATH:/Library/TeX/texbin"
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/Users/m/anaconda3/bin:$PATH"
+#
+#
+#
+
 export GOPATH=$HOME/workspace/go-workspace
 export SPARK_HOME=/Users/m/workspace/spark/spark-2.0.0-bin-hadoop2.7
+export MEETUP_API_KEY='38a4e6d755144067253062354754e'
 export H2O_HOME=/Users/m/workspace/h2o-3
-
-export PYTHONPATH="/Users/m/miniconda2/envs/py27/lib/python2.7/site-packages:$PYTHONPATH"
+export PROJECT_VODA_HOME=/Users/m/workspace/project-voda
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -58,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git jira)
 
 # User configuration
 
@@ -95,8 +107,20 @@ alias gw='./gradlew'
 
 # Use sublimetext for editing config files
 alias zshconfig="subl ~/.zshrc"
+# alias envconfig="subl ~/Projects/config/env.sh"
 
-# set an alias for the neo machine learning library
+# set Java version
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+
+# Add env.sh
+# . ~/workspace/config/env.sh
+
+# export WORKON_HOME=~/Envs
+# mkdir -p $WORKON_HOME
+# source /usr/local/bin/virtualenvwrapper.sh
+
 alias neon="~/workspace/neon/bin/neon"
 alias nocors="open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir"
 
@@ -116,9 +140,19 @@ cr() {
   awk '{n+=1} END {print n}' "$1"
 }
 
+# play a midi file specified in the first arg with timidity
+td() {
+  timidity "$1"
+}
+
 # alias for npm run build
 b() {
   npm run build
+}
+
+# alias for npm run build-js
+bjs() {
+  npm run build-js
 }
 
 # alias for npm run lint
@@ -134,6 +168,7 @@ lint() {
 pr() {
   git fetch "$1" pull/"$2"/head:"$3"
   git checkout "$3"
+}
 
 # add magic
 alias enchant='git add'
@@ -158,7 +193,4 @@ alias obtain='git fetch'
 alias rise='npm run dev'
 alias spells='ls -lAFh'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-export PATH="$PATH:/Library/TeX/texbin"
