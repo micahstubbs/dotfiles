@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 15,
+    "editor.tabSize": 2,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.colorTheme": "Monokai",
+    "html.format.wrapLineLength": 0,
+    "html.format.contentUnformatted": "pre,code,textarea,img",
+    "html.format.enable": false
+}
