@@ -1,0 +1,66 @@
+{
+  "auto_complete_triggers": [
+    {
+      "characters": "<",
+      "selector": "text.html"
+    },
+    {
+      "characters": "/",
+      "selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+    }
+  ],
+  "binary_file_patterns": [
+    "*.sublime-workspace",
+    "**/dist/**",
+    "**/vendor/**",
+    "node_modules/",
+    "**/bower_components/**",
+    "bundle.js",
+    "tasks.md",
+    "static/",
+    "VIP-feed-information-project/",
+    "build/flow.js",
+    "bootstrap.css.map",
+    "flow-reference.sublime.workspace",
+    "h2o-flow/lib/",
+    "h2o-flow/CHANGELOG.md",
+    "h2o-flow/patch",
+    "h2o-flow/README.md",
+    "h2o-flow/build/",
+    "h2o-flow/fonts/",
+    "h2o-flow/**.styl",
+    "h2o-flow/**.png",
+    "torrent/lib/",
+    "torrent/CHANGELOG.md",
+    "torrent/patch",
+    "torrent/README.md",
+    "torrent/build/",
+    "torrent/fonts/",
+    "torrent/**.styl",
+    "torrent/**.png",
+    "torrent/desugar.yml",
+    "drift/bin/",
+    "drift/tests/",
+    "**/h2o-3/smalldata/**",
+    "**/h2o-3/bigdata/**",
+    "**/integrated/**",
+    "*.patch",
+    "blockbuilder-search-index/data/**"
+  ],
+  "default_encoding": "utf-8",
+  "font_size": 16,
+  "ignored_packages": [
+    "Color Highlighter",
+    "D3js v4",
+    "EasyMotion",
+    "Indent XML",
+    "JavaScript Completions",
+    "Markdown",
+    "MarkdownEditing",
+    "MarkdownHighlighting",
+    "MarkdownPreview",
+    "Vintage"
+  ],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true
+}

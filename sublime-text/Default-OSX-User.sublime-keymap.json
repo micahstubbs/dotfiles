@@ -1,0 +1,32 @@
+[
+  { "keys": ["super+shift+x"], "command": "clone_file" },
+  {
+    "keys": ["/"],
+    "command": "close_tag",
+    "args": { "insert_slash": true },
+    "context": [
+      {
+        "key": "selector",
+        "operator": "equal",
+        "operand": "(text.html, text.xml, meta.jsx.js) - string - comment",
+        "match_all": true
+      },
+      {
+        "key": "preceding_text",
+        "operator": "regex_match",
+        "operand": ".*<$",
+        "match_all": true
+      },
+      { "key": "setting.auto_close_tags" }
+    ]
+  },
+  {
+    "keys": ["super+d"],
+    "command": "ace_jump_char"
+  },
+  {
+    "keys": ["super+shift+d"],
+    "command": "ace_jump_line"
+  },
+  { "keys": ["super+b"], "command": "js_prettier" }
+]

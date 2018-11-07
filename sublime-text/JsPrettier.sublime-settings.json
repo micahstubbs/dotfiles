@@ -1,0 +1,13 @@
+{
+  "prettier_cli_path": "/usr/local/bin/prettier",
+  "node_path": "/usr/local/bin/node",
+  "auto_format_on_save": true,
+  "allow_inline_formatting": true,
+  "prettier_options": {
+    "parser": "babylon",
+    "singleQuote": true,
+    "printWidth": 80,
+    "jsxBracketSameLine": false,
+    "semi": false
+  }
+}
